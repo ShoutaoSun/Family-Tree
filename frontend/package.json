@@ -9,7 +9,7 @@
     "build": "vite build",
     "postbuild": "node -e \"require('fs').writeFileSync('dist/.nojekyll', '')\"",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist",
+    "deploy": "npm run build && gh-pages -d dist --dotfiles",
     "lint": "run-s lint:*",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
