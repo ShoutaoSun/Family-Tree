@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && touch dist/.nojekyll && gh-pages -d dist",
+    "deploy": "npm run build &&  type nul > .nojekyll && gh-pages -d dist",
     "lint": "run-s lint:*",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
