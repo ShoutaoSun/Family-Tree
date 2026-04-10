@@ -127,7 +127,7 @@ const toggleMenu = () => {
 /* 页脚 */
 .site-footer {
   background: #eef2e6;
-  padding: 2rem 1rem;
+  padding: 1.2rem 1rem;
   margin-top: auto;
   border-top: 1px solid #d8e0ce;
 }

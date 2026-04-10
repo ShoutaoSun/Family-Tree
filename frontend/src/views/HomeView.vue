@@ -4,12 +4,8 @@
     <section class="hero">
       <div class="hero-content">
         <h1 class="main-title">千枝同根</h1>
-        <p class="subtitle">同根而生，向光而长</p>
         <div class="decorative-line"></div>
-        <p class="hero-description">
-          追溯血脉之源，铭记家族故事。<br />
-          在这里，每一支都来自同一片沃土。
-        </p>
+        <p class="subtitle">同根而生，向光而长</p>
         <button class="explore-btn" @click="scrollToFeatures">探索家谱</button>
       </div>
     </section>
@@ -30,12 +26,12 @@
             <p>世系传承，指尖翻阅</p>
           </div>
           <div class="card">
-            <div class="card-icon">🖼️</div>
+            <div class="card-icon">📸</div>
             <h3>影像记忆</h3>
             <p>岁月留影，家族珍藏</p>
           </div>
           <div class="card">
-            <div class="card-icon">🤝</div>
+            <div class="card-icon">📤</div>
             <h3>上传信息</h3>
             <p>共同修谱，续写家史</p>
           </div>
@@ -95,7 +91,7 @@ const scrollToFeatures = () => {
 }
 
 .decorative-line {
-  width: 70px;
+  width: 220px;
   height: 2px;
   background: linear-gradient(90deg, #b5c9a2, #8ba888, #b5c9a2);
   margin: 1.2rem auto;
