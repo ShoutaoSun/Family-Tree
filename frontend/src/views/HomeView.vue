@@ -128,7 +128,7 @@ const scrollToFeatures = () => {
 }
 
 .main-title {
-  font-size: clamp(3rem, 12vw, 5.5rem);
+  font-size: clamp(3rem, 8vw, 5.2rem);
   font-weight: 200;
   font-family: "XuanZongFont";
   background: linear-gradient(135deg, #2c5e2d, #6b8c5c, #c2a575);
@@ -149,7 +149,7 @@ const scrollToFeatures = () => {
 }
 
 .decorative-line {
-  width: 400px;
+  width: 340px;
   height: 2.2px;
   background: linear-gradient(90deg, #b5c9a2, #8ba888, #b5c9a2);
   margin: 1.2rem 0;
