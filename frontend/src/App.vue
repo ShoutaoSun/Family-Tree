@@ -3,6 +3,7 @@
     <!-- 顶部导航栏 -->
     <header class="site-header">
       <div class="logo">
+        <img src="@/assets/logo.svg" alt="Logo" class="logo-img" />
         <span class="logo-text">千枝同根</span>
       </div>
       <nav :class="['nav-links', { show: mobileMenuOpen }]">
@@ -10,6 +11,7 @@
         <router-link to="/tree" class="nav-link">家族树</router-link>
         <router-link to="/view" class="nav-link">族谱预览</router-link>
         <router-link to="/image" class="nav-link">影像记忆</router-link>
+        <router-link to="/update" class="nav-link">上传信息</router-link>
         <router-link to="/about" class="nav-link">关于我们</router-link>
       </nav>
       <button class="mobile-menu-btn" @click="toggleMenu">☰</button>
@@ -53,12 +55,12 @@ const toggleMenu = () => {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: rgba(255, 255, 250, 0.92);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 245, 0.7);
+  backdrop-filter: blur(16px);
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(180, 160, 120, 0.25);
+  border-bottom: 1px solid rgba(180, 160, 120, 0.2);
   box-shadow: 0 2px 8px rgba(0,0,0,0.02);
 }
 
@@ -69,6 +71,11 @@ const toggleMenu = () => {
   font-weight: 600;
   font-size: 1.25rem;
   color: #2c4b2c;
+}
+.logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
 }
 .logo-icon {
   font-size: 1.6rem;
