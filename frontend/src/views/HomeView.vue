@@ -1,12 +1,20 @@
 <template>
   <div class="home">
-    <!-- Hero 主视觉区 -->
+    <!-- Hero 主视觉区：左右布局 -->
     <section class="hero">
-      <div class="hero-content">
-        <h1 class="main-title">千枝同根</h1>
-        <div class="decorative-line"></div>
-        <p class="subtitle">同根而生，向光而长</p>
-        <button class="explore-btn" @click="scrollToFeatures">探索家谱</button>
+      <div class="hero-container">
+        <!-- 左侧文字区：毛笔风格，左对齐 -->
+        <div class="hero-left">
+          <h1 class="main-title">千枝同根</h1>
+          <div class="decorative-line"></div>
+          <p class="subtitle">同根而生，向光而长</p>
+          <button class="explore-btn" @click="scrollToFeatures">开始探索家谱</button>
+        </div>
+
+        <!-- 右侧图片区 -->
+        <div class="hero-right">
+          <img src="@/assets/image1.png" class="hero-image" loading="lazy"/>
+        </div>
       </div>
     </section>
 
@@ -59,21 +67,70 @@ const scrollToFeatures = () => {
   min-height: 85vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  padding: 2rem 2rem;
   background: radial-gradient(circle at 20% 30%, rgba(235, 220, 190, 0.2) 0%, rgba(230, 242, 245, 0.1) 100%),
               linear-gradient(135deg, #fefaf0 0%, #f0f4ea 100%);
-  padding: 2rem;
 }
 
-.hero-content {
-  max-width: 900px;
+.hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.hero-left {
+  flex: 1 1 300px;
   animation: fadeInUp 0.8s ease-out;
+  text-align: left; 
+}
+
+.hero-right {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 32px;
+  box-shadow: 0 24px 40px -16px rgba(40, 60, 30, 0.25),
+              0 8px 12px -6px rgba(0,0,0,0.05);
+  border: 2px solid rgba(210, 190, 150, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s;
+  background: #e2e6dd;
+}
+
+.hero-image:hover {
+  transform: scale(1.01);
+  box-shadow: 0 30px 50px -18px #3a5e3a40;
+  border-color: #cbbd96;
+}
+
+/* ===== 动画 ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .main-title {
   font-size: clamp(3rem, 12vw, 5.5rem);
-  font-weight: 800;
+  font-weight: 200;
+  font-family: "XuanZongFont";
   background: linear-gradient(135deg, #2c5e2d, #6b8c5c, #c2a575);
   background-clip: text;
   -webkit-background-clip: text;
@@ -83,18 +140,19 @@ const scrollToFeatures = () => {
 }
 
 .subtitle {
+  font-family: "DingLieFont";
   font-size: clamp(1rem, 4vw, 1.8rem);
   font-weight: 400;
   color: #5b6e5a;
-  letter-spacing: 0.15em;
-  margin-bottom: 1rem;
+  letter-spacing: 0.4em;
+  margin-bottom: 2rem;
 }
 
 .decorative-line {
-  width: 220px;
-  height: 2px;
+  width: 400px;
+  height: 2.2px;
   background: linear-gradient(90deg, #b5c9a2, #8ba888, #b5c9a2);
-  margin: 1.2rem auto;
+  margin: 1.2rem 0;
   border-radius: 2px;
 }
 
@@ -123,10 +181,20 @@ const scrollToFeatures = () => {
 }
 
 .explore-btn:hover {
-  background: #fff7e8;
-  transform: translateY(-3px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-  border-color: #8ba888;
+  background: linear-gradient(135deg, #faf3e0, #dce8d5, #bdd0b2);
+  color: #2c5e2d;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 28px rgba(80, 110, 70, 0.12);
+  border-color: #bdd0b2;
+}
+
+.explore-btn:active {
+  background: linear-gradient(135deg, #f7f0dd, #d9e5ce, #b8ceac);
+  color: #2c5e2d;
+  border-color: #9fb898;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(80, 110, 70, 0.12);
+  transition: all 0.1s ease;
 }
 
 /* 特性卡片区 */

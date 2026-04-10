@@ -1,0 +1,17 @@
+/* 子标题字体 */
+@font-face {
+  font-family: 'DingLieFont';
+  src: url('@/assets/fonts/dingliesongtypeface.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 玄宗字体 */
+@font-face {
+  font-family: 'XuanZongFont';
+  src: url('@/assets/fonts/XuanZongTi.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
